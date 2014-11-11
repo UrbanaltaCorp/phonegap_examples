@@ -1,8 +1,6 @@
 // This example is from: https://github.com/randdusing/BluetoothLE
 var addressKey = "address";
 
-var bluetoothle;
-
 var heartRateServiceUuid = "180d";
 var heartRateMeasurementCharacteristicUuid = "2a37";
 var clientCharacteristicConfigDescriptorUuid = "2902";
@@ -15,6 +13,8 @@ var reconnectTimer = null;
 
 var iOSPlatform = "iOS";
 var androidPlatform = "Android";
+
+bluetoothle.initialize(initializeSuccess, initializeError);
 
 function initializeSuccess(obj)
 {
@@ -589,5 +589,3 @@ function closeError(obj)
 {
     console.log("Close error: " + obj.error + " - " + obj.message);
 }
-
-bluetoothle.initialize(initializeSuccess, initializeError);
