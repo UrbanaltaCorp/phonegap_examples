@@ -6,8 +6,6 @@ var EmployeeView = function(employee) {
         this.el.on('click', '.add-contact-btn', this.addToContacts);
     };
     
-    this.initialize();
-
     this.render = function() {
         this.el.html(EmployeeView.template(employee));
         return this;
@@ -45,6 +43,8 @@ var EmployeeView = function(employee) {
         contact.save();
         return false;
     };
+
+    this.initialize();
 }
  
 EmployeeView.template = Handlebars.compile($("#employee-tpl").html());
