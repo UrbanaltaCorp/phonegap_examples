@@ -1,6 +1,8 @@
 // This example is from: https://github.com/randdusing/BluetoothLE
 var addressKey = "address";
 
+var bluetoothle;
+
 var heartRateServiceUuid = "180d";
 var heartRateMeasurementCharacteristicUuid = "2a37";
 var clientCharacteristicConfigDescriptorUuid = "2902";
