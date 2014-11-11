@@ -14,8 +14,6 @@ var reconnectTimer = null;
 var iOSPlatform = "iOS";
 var androidPlatform = "Android";
 
-bluetoothle.initialize(initializeSuccess, initializeError);
-
 function initializeSuccess(obj)
 {
     if (obj.status == "enabled")
@@ -589,3 +587,5 @@ function closeError(obj)
 {
     console.log("Close error: " + obj.error + " - " + obj.message);
 }
+
+bluetoothle.initialize(initializeSuccess, initializeError);
